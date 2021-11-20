@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MEMBER</title>
+
+</head>
+<body>
+  
+
+  <script type="text/javascript">
+ 
+    var jenis = prompt("Masukkan jenis 1.Deluxe Room 2.Suite Room 3.Precident Room")
+    var lama =prompt("Berapa hari anda menginap ? ")
+    var kamar = "";
+    var tarif = 0;
+  
+
+
+if (jenis==1){
+  tarif=lama*275000;
+  kamar="duluxe room";
+}else if (jenis==2){
+  tarif=lama*300000
+  kamar="suite room";
+}else if( jenis==3){
+  tarif=lama*375000;
+   kamar="president room";
+}
+
+if (lama >=4 && lama <=7){
+  diskon = 0.20 * tarif;
+}else if (lama > 7){
+  diskon = 0.35 * tarif;
+}
+
+
+
+ var bayar = tarif - diskon;
+
+
+
+document.write("jenis kamar : " + kamar + "<br>");
+document.write("<P>lama menginap : " + lama + "<br></p>");
+document.write(`<p>Tarif Penginapan : ${tarif} </p>`  );
+document.write(`<p>Diskon Penginapan : ${diskon} </p>`  );
+document.write(`<p>Total Pembayaran : ${bayar} </p>`  );
+  
+        
+</script>
+</html>

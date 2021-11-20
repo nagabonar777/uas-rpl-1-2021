@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>umur</title>
+  <style type="text/css">
+    body{
+      overflow-y: hidden;
+      margin:0;
+      padding: 0;
+      font-family: monospace;
+      background-color: #777171;
+    }
+    form{
+      font-family: fantasy;
+      background-color: rgba(87, 84, 84, 0.7);
+      width: 300px;
+      margin: 180px auto;
+      padding: 30px;
+      text-align: center;
+      color: #2D2D2D;
+      border-radius: 130px 130px;
+      box-shadow: 2px 2px 7px #393939;
+    }
+    input{
+      margin: 15px;
+    }
+    input.login{
+      background-color: #010407;
+      color: #ffffff;
+      font-family:verdana;
+      font-weight:lighter;
+      border-radius: 10px;
+      padding: 5px 10px;
+      margin: 30px 10px auto 0px;
+      text-transform: uppercase;
+      transition: .2s;
+    }
+    input.login:hover{
+      background-color: #080103;
+      color: #CDCDCD;
+    }
+    
+    p{
+      text-align:center;
+      margin: 50px auto;
+      margin-top: 10px;
+      padding: 10px;
+      font-weight: bold;
+      color: #ffffff;
+      font-family: verdana;
+      background-color: #0c0305;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <form action="halaman utama.html" method="get" id="myForm" onsubmit=" return validasi()">
+      <p>Menentukan Umur</p>
+      Nama  <input type="text" name="nama" placeholder="Masukan nama"><br>
+      
+      Umur anda  <input type="text" name="umuranda" placeholder="Masukan umur">
+    
+    
+      <input class="login" type="submit" name="submit" value="Masuk">
+    </form>
+  </body>
+  <script type="text/javascript">
+  function validasi(){
+    var nama= document.forms["myForm"]["nama"].value;
+    
+    var umuranda= document.forms["myForm"]["umuranda"].value;
+
+    var umur ="";
+
+if(umuranda <=5){
+    umur = "Wah masih balita";
+}
+else if(umuranda <=12){
+    umur = "Kamu itu masih bocil bau bawang paham ?";
+}
+else if(umuranda <=18){
+    umur = "Cie yang sudah remaja";
+}
+else if(umuranda <=40){
+    umur = "Sudah masuk kategori dewasa";
+}
+else if(umuranda <=60){
+    umur = "Orang tua sudah banyak istirahat";
+}
+else{
+    (umuranda=>60)
+    umur = "Cie udh bau tanah"
+}
+document.write("<center>Nama : " + nama +  "<br></center>")
+
+document.write(`<center><p>umuranda   : ${umur} </p></center>`  );
+  
+        }
+</script>
+</html>
